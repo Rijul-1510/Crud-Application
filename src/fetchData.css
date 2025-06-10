@@ -1,0 +1,87 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(135deg, #f7d8a8 0%, #a271f8 20%, #1d133b 100%);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+}
+
+.content {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 1400px;
+  background: linear-gradient(135deg, #150b32 20%, #5a3a90 60%, #dfdcd8 100%);
+  border-radius: 16px;
+  padding: 10px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.2);
+}
+
+.heading {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.table th, .table td {
+  padding: 16px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  text-align: left;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.table th {
+  background-color: #55608f;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.table tbody tr:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.table td:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -9999px;
+  bottom: -9999px;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: -1;
+}
+
+.buttons {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #ffffff33;
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buttons:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #2d2d2d;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.btn {
+  margin-top: 10px;
+}
