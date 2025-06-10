@@ -1,70 +1,99 @@
-# Getting Started with Create React App
+# CRUD Application
+This is a full-stack CRUD application built with React (frontend) and Node.js (backend) that enables users to sign up, log in, update their profiles, and upload documents (PDF, DOC, or DOCX). The application features form validation, real-time feedback, edit mode, and document previews, making it a solid foundation for modern user management systems.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The backend uses a simple user_data.json file as a mock database and supports file uploads stored in the uploads/ directory. Users can view and manage their profiles through a dedicated fetch data interface.
+This project demonstrates practical implementation of:
 
-## Available Scripts
+- Authentication (Login/Sign-up)
+- Form validation and controlled components
+- File upload with live preview and validation
+- JSON-based data persistence (mock DB)
+- Edit and update user records
+- Organized React project structure with custom styling
 
-In the project directory, you can run:
 
-### `npm start`
+# Directory Structure 
+``` bash
+crudapplication/
+├── node_modules/                # Dependencies
+├── public/
+│   ├── index.html              # Main HTML template
+│   ├── manifest.json           # Web manifest
+│   └── travel.mp4              # (Optional) Static asset
+│
+├── server/                     # Express Backend
+│   ├── uploads/                # Uploaded user files
+│   │   └── .gitkeep            # Keeps uploads folder in Git (optional)
+│   ├── Server.js              # Main Express server logic
+│   └── user_data.json         # JSON file acting as a mock database
+│
+├── src/                        # React Frontend
+│   ├── App.js                 # Main entry point with routes
+│   ├── index.js               # React DOM rendering
+│   ├── index.css              # Global styles
+│   ├── Login.js               # Login form
+│   ├── Login.css              # Login form styles
+│   ├── SignUp.js              # Sign-up + edit form
+│   ├── SignUp.css             # Sign-up form styles
+│   ├── FetchData.js           # Page for fetching and showing user data
+│   ├── fetchData.css          # FetchData page styles
+│   ├── ForgotPassword.js      # Forgot Password functionality
+│
+├── .gitignore                 # Git ignore rules (e.g., node_modules, uploads)
+├── package.json               # NPM config (dependencies, scripts)
+├── package-lock.json          # Auto-generated lockfile
+└── README.md                  # Project overview and instructions
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Usage 
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# 1. Install Dependencies
+     In the root directory, run:
+     ``` bash
+     npm install
+     ```
+     
+# 2. Start the Backend Server
+     Navigate to the backend server directory:
+     ```bash
+      cd server
+      ```
+     Run the backend:
+     ```bash 
+     node server.js
+     ```
+This will start the server on http://localhost:5000
 
-### `npm test`
+# 3.Start the React Frontend
+    In a separate terminal window, start the frontend:
+    ```bash
+    npm start
+    ```
+This runs the app in development mode at http://localhost:3000
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Results 
 
-### `npm run build`
+# Login Screen 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+https://github.com/user-attachments/assets/6bcaf2d5-0add-446e-8f55-113f984204da
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Forgot Password Screen
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Screenshot 2025-06-10 164923](https://github.com/user-attachments/assets/ccdd958c-33ee-4a7f-bdaa-c209631afea9)
 
-### `npm run eject`
+![Screenshot 2025-06-10 165002](https://github.com/user-attachments/assets/07360b71-de3a-4cb7-87a7-846642c23278)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Signup Screen
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+https://github.com/user-attachments/assets/8904a6da-ea17-4102-a98a-af5f3170a4f9
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# User Details Screen 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Screenshot 2025-06-10 165155](https://github.com/user-attachments/assets/c42207cc-dc87-4ba8-920c-fa417fddab33)
 
-## Learn More
+# Application Working 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+https://github.com/user-attachments/assets/2c4d5ef7-22a5-4825-9082-e7ffbfaaa832
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
