@@ -49,27 +49,19 @@ crudapplication/
 
 # 1. Install Dependencies
      In the root directory, run:
-     ``` bash
-     npm install
-     ```
+      npm install
      
 # 2. Start the Backend Server
      Navigate to the backend server directory:
-     ```bash
       cd server
-      ```
      Run the backend:
-     ```bash 
-     node server.js
-     ```
-This will start the server on http://localhost:5000
+      node server.js
+     This will start the server on http://localhost:5000
 
 # 3.Start the React Frontend
     In a separate terminal window, start the frontend:
-    ```bash
-    npm start
-    ```
-This runs the app in development mode at http://localhost:3000
+     npm start
+     This runs the app in development mode at http://localhost:3000
 
 # Results 
 
